@@ -1,4 +1,4 @@
-package com.tao.leetcode;
+package com.leetcode;
 
 public class SearchInsert {
     public  static int solution1(int[] nums, int target){
