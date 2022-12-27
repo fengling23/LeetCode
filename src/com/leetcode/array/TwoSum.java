@@ -13,6 +13,7 @@ public class TwoSum {
                 res[0] = m.get(target - nums[i]);
                 break;
             }
+            //避免sum = 2 * num(i)
             m.put(nums[i], i);
         }
         return res;
