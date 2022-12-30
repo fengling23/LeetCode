@@ -3,6 +3,7 @@ package com.leetcode.array.diffsum;
 public class CorpFlightBookings_1109 {
 
     //差分数组
+    //这样构造差分数组diff，就可以快速进行区间增减的操作，如果你想对区间nums[i..j]的元素全部加 3，那么只需要让diff[i] += 3，然后再让diff[j+1] -= 3即可：
     public int[] corpFlightBookings1(int[][] bookings, int n) {
         int[] diffsum = new int[n+1];
 
