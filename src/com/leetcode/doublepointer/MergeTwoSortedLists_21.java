@@ -1,6 +1,6 @@
 package com.leetcode.doublepointer;
 
-public class MergeTwoSortedLists_3 {
+public class MergeTwoSortedLists_21 {
 
     class ListNode {
       int val;
