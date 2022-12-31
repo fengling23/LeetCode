@@ -1,20 +1,12 @@
-package com.leetcode.doublepointer;
+package com.leetcode.doublepointer.speedpointer;
+
+import com.leetcode.linkedlist.ListNode;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
 public class MergeKSortedLists_23 {
-
-    class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
-
-
     //拆分方法
     public ListNode mergeKLists1(ListNode[] lists) {
         int k = lists.length;

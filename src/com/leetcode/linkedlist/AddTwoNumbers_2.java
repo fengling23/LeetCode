@@ -1,11 +1,4 @@
 package com.leetcode.linkedlist;
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
 
 public class AddTwoNumbers_2 {
     //总体思路: 诸位相加, 没值补0

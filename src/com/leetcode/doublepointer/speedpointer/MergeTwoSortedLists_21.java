@@ -1,14 +1,7 @@
-package com.leetcode.doublepointer;
+package com.leetcode.doublepointer.speedpointer;
 
+import com.leetcode.linkedlist.ListNode;
 public class MergeTwoSortedLists_21 {
-
-    class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
     //快慢指针的while写法
     public ListNode mergeTwoLists1(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(-1), p = dummy;
