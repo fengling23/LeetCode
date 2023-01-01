@@ -4,7 +4,7 @@ import com.leetcode.tree.Tree;
 import java.util.*;
 
 public class BinaryTree extends Tree {
-    BinaryNode root;
+    public BinaryNode root;
 
     public void preOrderTraversal() {
         preOrderTraversal(root);
