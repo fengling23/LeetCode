@@ -106,6 +106,7 @@ public class BinaryTree extends Tree {
         }
     }
 
+    //后序位置的特点，只有后序位置才能通过返回值获取子树的信息。
     public void postOrderTraversal() {
         postOrderTraversal(root);
     }

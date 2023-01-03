@@ -33,36 +33,25 @@ public class DiameterOfBinaryTree_543 {
         return height;
     }
 
-    public static int diameterOfBinaryTree1(TreeNode root) {
-        int diameter = 0;
-        return maxDepth(root, diameter)[1];
+    //必须放在外面, 传递基础变量在方法中的修改出方法后不会生效
+    public int diameter = 0;
+
+    public int diameterOfBinaryTree1(TreeNode root) {
+        maxDepth1(root);
+        return diameter;
     }
 
-    //优化: 计算深度的时候一并计算直径
-    public static int[] maxDepth(TreeNode root, int diameter) {
-        if (root == null) return new int[]{0,0};
-
-        int leftHeight = maxDepth(root.left, diameter)[0];
-        int rightHeight = maxDepth(root.right, diameter)[0];
-
-        int height = 0;
-        if (map.containsKey(root))  {
-            height = map.get(root);
-        } else {
-            height = 1 + Math.max(leftHeight, rightHeight);
-            map.put(root, height);
-        }
-
+    //优化: 计算深度的时候一并更新直径
+    public int maxDepth1(TreeNode root) {
+        if (root == null) return 0;
+        int leftHeight = maxDepth1(root.left);
+        int rightHeight = maxDepth1(root.right);
         diameter = Math.max(diameter, leftHeight+rightHeight);
-
-        return new int[]{height, diameter};
+        int height = 1 + Math.max(leftHeight, rightHeight);
+        return height;
     }
 
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        System.out.println(diameterOfBinaryTree1(root));
-    }
+
 
 
 }
