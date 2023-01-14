@@ -4,6 +4,7 @@ package com.leetcode.sort;
 //要求有序
 public class BinarySearch {
 
+    //非递归查找
     public int binarySearch(int[] array, int e) {
         if(array.length == 0 || e < array[0] || e > array[array.length-1]){
             return -1;
@@ -23,13 +24,14 @@ public class BinarySearch {
         }
         return -1;
     }
-
+    //递归
     public int binarySearch1(int[] array, int e) {
         if(array.length == 0 || e < array[0] || e > array[array.length-1]){
             return -1;
         }
         return help(array, e, 0, array.length-1);
     }
+
     public int help(int[] array, int e, int left, int right){
         if(left < right) {
             int mid = (left + right)/2;

@@ -2,8 +2,9 @@ package com.leetcode.array;
 
 import java.util.HashMap;
 
-public class TwoSum {
-	
+public class TwoSum_1 {
+
+    //无序数组
 	public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
         int[] res = new int[2];
