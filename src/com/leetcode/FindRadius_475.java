@@ -2,7 +2,7 @@ package com.leetcode;
 
 import java.util.Arrays;
 
-public class FindRadius {
+public class FindRadius_475 {
 
     public static void main(String[] args) {
         int[] houses = {12};

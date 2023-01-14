@@ -1,6 +1,6 @@
 package com.leetcode;
 
-public class Sqrtx {
+public class Sqrtx_69 {
     public static int solution(int x) {
         if (x <= 1) {return x;}
         int left = 0, right = x;
