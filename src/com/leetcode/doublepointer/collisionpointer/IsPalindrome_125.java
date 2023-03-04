@@ -28,6 +28,7 @@ public class IsPalindrome_125 {
         String rf = new StringBuffer(f).reverse().toString();
         return f.equals(rf);
     }
+
     public static void main(String[] args) {
         System.out.println(isPalindrome1("A man, a plan, a canal: Panama"));
     }

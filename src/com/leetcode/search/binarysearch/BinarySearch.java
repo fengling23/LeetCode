@@ -60,11 +60,11 @@ public class BinarySearch {
         while (left < right) {
             int mid = (left + right) / 2;
             if (nums[mid] == target) {
+                //找到 target 时不要立即返回，而是缩小「搜索区间」的上界right，在区间[left, mid)中继续搜索，即不断向左收缩，达到锁定左侧边界的目的
                 right = mid;
             } else if (nums[mid] < target) {
                 left = mid + 1;
             } else if (nums[mid] > target) {
-                //找到 target 时不要立即返回，而是缩小「搜索区间」的上界right，在区间[left, mid)中继续搜索，即不断向左收缩，达到锁定左侧边界的目的
                 right = mid; // 注意
             }
         }
