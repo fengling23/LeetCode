@@ -39,7 +39,7 @@ public class LongestPalindrome_5 {
             if(l - i <= longestLen/2) break;
             int left = i, right = i;
             //跳过重复的
-            while (right < l && s.charAt(right) == s.charAt(right+1)) right++;
+            while (right < l-1 && s.charAt(right) == s.charAt(right+1)) right++;
             while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)){
                 --left; ++right;
             }
@@ -53,6 +53,6 @@ public class LongestPalindrome_5 {
     }
 
     public static void main(String[] args) {
-        System.out.println(longestPalindrome_1("babad"));
+        System.out.println(longestPalindrome_1("bb"));
     }
 }
