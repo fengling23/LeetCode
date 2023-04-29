@@ -213,6 +213,7 @@ public class BinaryTree extends Tree {
         }
     }
 
+    //广度优先遍历, 递归写法
     public void levelOrderTraversal(){
         levelOrderTraversal(root);
     }
@@ -236,6 +237,7 @@ public class BinaryTree extends Tree {
         if (node.right != null) help(node.right, level+1, nodes);
     }
 
+    //广度优先遍历, 非递归写法
     public static void levelOrderTraversal1(BinaryNode root){
 
         if (root == null) {

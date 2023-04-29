@@ -1,4 +1,6 @@
-package com.leetcode.tree.binarytree;
+package com.leetcode.tree.binarytree.bfs;
+
+import com.leetcode.tree.binarytree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
