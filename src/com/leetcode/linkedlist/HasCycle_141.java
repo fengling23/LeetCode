@@ -7,7 +7,7 @@ public class HasCycle_141 {
 
     //利用hashset判断有无next指针指向之前的节点
     public boolean hasCycle(ListNode head) {
-        if (head == null || head.next == null) return false;
+        //if (head == null || head.next == null) return false;
         Set<ListNode> set = new HashSet<>();
         ListNode p = head;
         while (p != null) {
