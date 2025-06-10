@@ -10,6 +10,7 @@ public class BinaryTree extends Tree {
         preOrderTraversal(root);
     }
 
+    //前序遍历， 递归实现
     public static void preOrderTraversal(BinaryNode node) {
         if (node != null) {
             node.visit();
@@ -18,6 +19,9 @@ public class BinaryTree extends Tree {
         }
     }
 
+    //前序遍历，非递归实现
+    //双压栈，先右后左，出栈时访问
+    //简单明了, 但是占用存储空间
     public static void preOrderTraversal1(BinaryNode node) {
         Stack<BinaryNode> stack = new Stack<>();
         if (node == null) return;
@@ -31,7 +35,9 @@ public class BinaryTree extends Tree {
         }
     }
 
-    //非递归实现
+    //前序遍历，非递归实现
+    //单压栈，进栈时访问
+    //占用空间更少
     public static void preOrderTraversal2(BinaryNode node) {
         Stack<BinaryNode> stack = new Stack<>();
         while (node != null || !stack.isEmpty()) {
@@ -53,6 +59,7 @@ public class BinaryTree extends Tree {
         inOrderTraversal(root);
     }
 
+    //中序遍历，递归实现
     public static void inOrderTraversal(BinaryNode node) {
         if (node != null) {
             inOrderTraversal(node.left);
