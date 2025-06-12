@@ -7,7 +7,6 @@ public class DetectCycle_142 {
 
     //利用hashset判断有无next指针指向之前的节点
     public ListNode detectCycle(ListNode head) {
-        if (head == null || head.next == null) return null;
         Set<ListNode> set = new HashSet<>();
         ListNode p = head;
         while (p != null) {
@@ -22,7 +21,6 @@ public class DetectCycle_142 {
     // fast一定比slow多走了k步，这多走的k步其实就是fast指针在环里转圈圈，所以k的值就是环长度的「整数倍」
     // 假设相遇点距环的起点的距离为m，那么结合上图的 slow 指针，环的起点距头结点head的距离为k - m，也就是说如果从head前进k - m步就能到达环起点。
     // 如果从相遇点继续前进k - m步，也恰好到达环起点
-
     public ListNode detectCycle1(ListNode head) {
         ListNode fast = head, slow = head;
         while (fast != null && fast.next != null) {
